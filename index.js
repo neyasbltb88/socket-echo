@@ -12,7 +12,7 @@ app.get('/', (req, res, next) => res.send('ok'));
 
 app.ws('/', (ws, req) => {
     ws.on('message', (msg) => {
-        console.log('clients: ', wss.clients);
+        // console.log('clients: ', wss.clients);
         wss.clients.forEach((client) => client.send(msg));
     });
 });
